@@ -25,7 +25,10 @@ model_vgg16 = keras.applications.VGG16(
 )
 model_vgg16.trainable = False
 
-
+os.system(
+    "wget http://host.robots.ox.ac.uk/pascal/VOC/voc2011/VOCtrainval_25-May-2011.tar -P data/"
+)
+os.system("tar -xf data/VOCtrainval_25-May-2011.tar -C data/")
 # !wget http://host.robots.ox.ac.uk/pascal/VOC/voc2011/VOCtrainval_25-May-2011.tar -P data/ # noqa
 # !tar -xf data/VOCtrainval_25-May-2011.tar -C data/
 
